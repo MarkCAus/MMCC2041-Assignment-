@@ -1,0 +1,619 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Typography: use the same base font as the body for consistency */
+        h1, h2, h3 {
+            font-family: inherit; /* inherit body font*/
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Make the paragraph immediately after the UL in the planning section
+           stand out and sit further from the list */
+        #planning ul + p {
+            margin-top: 1.75rem;
+            font-weight: 600;
+            font-size: 1.12rem;
+            color: #222;
+        }
+        
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-scrolled {
+            background: rgba(26, 42, 108, 0.95);
+        }
+        
+        .nav-scrolled .nav-links a {
+            color: white;
+        }
+        
+        .nav-scrolled .nav-links a:hover {
+            color: #fdbb2d;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: inherit; /* use same font as body for consistent feel */
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a2a6c;
+        }
+        
+        .nav-scrolled .logo {
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #1a2a6c;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('Source Images/Megalong\ Valley.jpg') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transform: translateY(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s ease;
+        }
+        
+        .hero-content.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .scroll-arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            transform: rotate(45deg);
+            margin-bottom: 5px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) rotate(45deg);
+            }
+            40% {
+                transform: translateY(-10px) rotate(45deg);
+            }
+            60% {
+                transform: translateY(-5px) rotate(45deg);
+            }
+        }
+        
+        /* Story Sections */
+        .story-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+                /* Scroll-based Storytelling */
+                .scroll-story {
+                    padding: 4rem 2rem;
+                    background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(245,247,249,1) 100%);
+                }
+
+                .story-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 45% 55%;
+                    gap: 2rem;
+                    align-items: start;
+                }
+
+                .story-graphic {
+                    position: sticky;
+                    top: 120px;
+                    height: calc(70vh - 40px);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                    background: #000;
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                .story-graphic img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .graphic-caption {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    background: rgba(0,0,0,0.5);
+                    color: white;
+                    padding: 6px 10px;
+                    border-radius: 6px;
+                    font-size: 0.9rem;
+                    transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+                    background: white;
+                    border-radius: 8px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+                }
+
+.sticky-waterfalls {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border-radius: 0;
+    padding: 5vh 10vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+                .step h3 {
+                    margin-bottom: 0.5rem;
+                }
+
+                .step.active {
+                    border-color: #1a2a6c;
+                    background: linear-gradient(180deg, #ffffff 0%, #f3f6fb 100%);
+                    transform: translateY(-6px);
+                }
+
+                @media (max-width: 900px) {
+                    .story-container { grid-template-columns: 1fr; }
+                    .story-graphic { position: relative; top: 0; height: 40vh; }
+                }
+        
+        .section-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .text-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.75rem; /* space between stacked videos */
+        }
+
+        /* Remove extra bottom gap for the last video in the section */
+        .video-section .video-container:last-child {
+            margin-bottom: 0;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            position: relative;
+        }
+        
+    
+        
+        /* Full-width image sections */
+        .full-image {
+            height: 70vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .full-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 8s ease;
+        }
+        
+        .full-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .image-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            max-width: 500px;
+            border-radius: 5px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        
+        .full-image:hover .image-caption {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Continuous Campground Sections */
+        .campground-section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        
+        .campground-item {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+                /*Clickable cursor so users know they can open them */
+                .campground-item {
+                    cursor: pointer;
+                }
+        
+        .campground-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .campground-item:hover {
+            /* subtle visual feedback on hover */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .campground-item:focus {
+            outline: 3px solid rgba(26, 42, 108, 0.15);
+            outline-offset: 4px;
+        }
+        
+        .campground-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .campground-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        
+
+                /* Expanded state
+                   fills the viewport while keeping the original border-radius. */
+                .campground-item.expanded {
+                    position: fixed !important;
+                    top: 50% !important;
+                    left: 50% !important;
+                    transform: translate(-50%, -50%) !important;
+                    width: calc(100vw - 40px) !important;
+                    height: calc(100vh - 40px) !important;
+                    z-index: 10000 !important;
+                    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+                    border-radius: 12px;
+                    overflow: auto;
+                    background: white;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .campground-item.expanded .campground-image {
+                    height: 45vh;
+                    overflow: hidden;
+                }
+
+                .campground-item.expanded .campground-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: static;
+                    transform: none;
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                }
+
+                .campground-item.expanded .campground-content {
+                    padding: 1.5rem 2rem;
+                    max-height: calc(100vh - 45vh - 80px);
+                    overflow: auto;
+                }
+
+                /* Close button inside expanded card */
+                .campground-close {
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                    background: rgba(0,0,0,0.6);
+                    color: white;
+                    border: none;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    z-index: 10001;
+                    font-size: 1.1rem;
+                }
+
+                /* Dim overlay behind the expanded card */
+                .campground-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background: rgba(0,0,0,0.45);
+                    z-index: 9998;
+                }
+        
+        .campground-content {
+            padding: 2rem;
+        }
+        
+        .campground-features {
+            list-style: none;
+            margin: 1.5rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        .campground-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+
+        .campground-features li:hover {
+            transform: translateX(5px);
+        }
+        
+        .campground-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #fdbb2d;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1a2a6c;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #0d1a4d;
+            transform: translateY(-5px);
+        }
+    
+
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .story-section {
+                padding: 3rem 1rem;
+            }
+            
+            .campground-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
