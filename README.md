@@ -1,27 +1,49 @@
-# MMCC2041 Project
+# **MMCC2041 Project: The Blue Mountains Australia**
 
-Project Name : The Blue Mountains Australia.
+**Project Name:** The Blue Mountains Australia  
+**Primary Languages/Frameworks:** HTML, CSS, JavaScript, jQuery  
+**Purpose:** Academic project for MMCC2041 — now public for portfolio demonstration.
 
-Student ID: 48278157
+---
 
-Overview :
+## **Project Overview**
 
-Personal reflection
-Visiting the Blue Mountains left a lasting impression on me. Those moments of quiet observation and hands-on exploration shaped how I think about place, environment, and storytelling. This project grew naturally from that experience: it lets me combine what I learned in the field with the technical skills I’ve developed in this course.
+This website is an interactive digital showcase of the Blue Mountains, created as part of my MMCC2041 coursework. It combines firsthand observations from my visit with technical implementation using front-end web technologies.
 
-I believe this is an ideal project because it links my personal experience with my student learning: the site communicates first-hand observations while demonstrating practical JavaScript, jQuery and web design skills required by the assessment. It’s both meaningful to me and a solid piece of coursework.
+The site is designed to:
+- Present the natural beauty and cultural significance of the Blue Mountains
+- Demonstrate practical skills in web development, interactivity, and design
+- Reflect on the connection between place, experience, and digital storytelling
 
+---
 
-This project was created using a combination of AI assistance and the practical skills I developed throughout the unit.
-While the core concepts, structure, and implementation were guided by the knowledge and techniques I learned in class. Together, these elements contributed to a project that is both personally significant and academically rigorous.
+## **Motivation & Reflection**
 
+Visiting the Blue Mountains left a lasting impression on me. The moments of quiet observation and hands-on exploration shaped how I think about place, environment, and narrative. This project grew naturally from that experience—it allowed me to combine what I learned in the field with the technical skills I've developed in this unit.
 
+I believe this is an ideal project because it links personal experience with academic learning: the site communicates firsthand observations while demonstrating practical JavaScript, jQuery, and web design skills required by the assessment. It's both meaningful to me and a solid piece of coursework.
 
-Incorperation of: 
-- Correct and valid use of HTML5
-- An absence of deprecated HTML tags
-- Correct use of CSS
-- Use of jQuery and JavaScript to achieve user interaction
-- The first page you want the user to see must be index.html
-- Images must be optimized for the Web
-- Encouraged to connect their websites to other relevant content, which includes external websites as well as those created by other students, so take some time to see what else is happening in the class.
+---
+
+## **Technologies Used**
+
+| Technology | Purpose |
+|------------|---------|
+| **HTML5**  | Structure and semantic content |
+| **CSS3**   | Styling, layout, and responsive design |
+| **JavaScript** | Interactive features and dynamic behavior |
+| **jQuery**  | Simplified DOM manipulation and event handling |
+| **Git**     | Version control and project management |
+
+---
+
+## **Features**
+
+- **Responsive Design** – Adapts to desktop, tablet, and mobile screens
+- **Interactive Elements** – JavaScript/jQuery-driven components for engaging user experience
+- **Visual Storytelling** – Image galleries, maps, and descriptive content to convey the atmosphere of the Blue Mountains
+- **Clean & Accessible UI** – Focus on usability and readability
+
+---
+
+## **Project Structure**
