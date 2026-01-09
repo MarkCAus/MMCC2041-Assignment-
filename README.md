@@ -1,3 +1,9 @@
+This repository contains the completed source code for the MMCC2041 assignment, originally developed during the Semester 2, 2025 term.
+
+Original Development: Private repository (now archived)
+
+This repository is now public for demonstration purposes. All academic integrity guidelines were followed during the original development and submission.
+
 # **MMCC2041 Project: The Blue Mountains Australia**
 
 **Project Name:** The Blue Mountains Australia  
@@ -46,4 +52,3 @@ I believe this is an ideal project because it links personal experience with aca
 
 ---
 
-## **Project Structure**
